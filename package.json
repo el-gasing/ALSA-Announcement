@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "css:build": "tailwindcss -i ./static/src/input.css -o ./static/css/site.css",
-    "css:watch": "tailwindcss -i ./static/src/input.css -o ./static/css/site.css --watch"
+    "css:build": "tailwindcss -i ./assets/src/input.css -o ./static/css/site.css",
+    "css:watch": "tailwindcss -i ./assets/src/input.css -o ./static/css/site.css --watch"
   },
   "dependencies": {
     "@tailwindcss/cli": "^4.2.4",
