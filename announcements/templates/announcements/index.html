@@ -1,0 +1,53 @@
+{% load static %}
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Department Announcement</title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  </head>
+  <body class="flex min-h-dvh items-start justify-center">
+    <div class="mobile-screen relative overflow-hidden text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+      <img class="art-layer z-10" src="{% static 'img/container.svg' %}" alt="">
+
+      <header class="absolute left-1/2 top-[1.75%] z-40 flex h-[7%] w-[48%] -translate-x-1/2 items-start justify-center gap-[5.5%]" aria-label="Logo organisasi">
+        <img class="w-[48px] object-contain" src="{% static 'img/unhas.png' %}" alt="Logo Universitas Hasanuddin">
+        <img class="mt-[7px] w-[72px] object-contain" src="{% static 'img/alsa-white.png' %}" alt="Logo ALSA">
+        <img class="logo-gold mt-[3px] h-[66px] w-[45px] object-cover object-center" src="{% static 'img/gold-mark.png' %}" alt="Logo emas">
+      </header>
+
+      <main class="absolute inset-0">
+        <h1 class="absolute left-1/2 top-[31%] z-40 w-full -translate-x-1/2 text-center text-[clamp(42px,8.6cqw,52px)] font-black leading-[1.1] tracking-normal [text-shadow:0_8px_12px_rgba(0,0,0,0.42)]">
+          Department<br>
+          Announcement
+        </h1>
+
+        <form class="absolute inset-0" method="post">
+          {% csrf_token %}
+          <label class="login-label top-[48.4%]" for="nama">Nama</label>
+          <div class="field-bar top-[50.25%]" aria-hidden="true"></div>
+          <input class="login-field top-[50.25%]" id="nama" name="nama" autocomplete="name">
+
+          <label class="login-label top-[56.7%]" for="nim">NIM</label>
+          <div class="field-bar top-[58.5%]" aria-hidden="true"></div>
+          <input class="login-field top-[58.5%]" id="nim" name="nim" inputmode="numeric" autocomplete="off">
+
+          <button class="absolute left-[35.9%] top-[71.35%] z-50 h-[8%] w-[28.2%] border-0 bg-transparent text-[clamp(15px,4.5vw,19px)] font-black tracking-normal text-[#070707]" type="submit">
+            LOGIN
+          </button>
+        </form>
+
+        <p class="absolute bottom-[2.65%] left-0 z-40 w-full text-center text-[clamp(13px,3.5vw,15px)] font-black leading-[1.45] [text-shadow:0_3px_5px_rgba(0,0,0,0.55)]">
+          <span class="block">ALSA,</span>
+          <span class="block">Always be One!</span>
+        </p>
+      </main>
+
+      <img class="art-layer z-30" src="{% static 'img/profile_logo.svg' %}" alt="">
+      <img class="art-layer z-30" src="{% static 'img/lock.svg' %}" alt="">
+      <img class="art-layer z-30" src="{% static 'img/button.svg' %}" alt="">
+    </div>
+  </body>
+</html>

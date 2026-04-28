@@ -1,0 +1,59 @@
+{% load static %}
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ department_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+  </head>
+  <body class="flex min-h-dvh items-start justify-center">
+    <div class="mobile-screen department-screen relative overflow-hidden text-white shadow-[0_0_0_1px_rgba(255,255,255,0.08)]">
+      <img class="art-layer z-10" src="{% static 'img/dekorasi.svg' %}" alt="">
+      <img class="art-layer z-20" src="{% static 'img/congrats_text.svg' %}" alt="">
+      <img class="art-layer z-30" src="{% static 'img/logo_hrd.svg' %}" alt="">
+
+      <header class="absolute left-1/2 top-[1.35%] z-40 flex h-[7%] w-[48%] -translate-x-1/2 items-start justify-center gap-[5.5%]" aria-label="Logo organisasi">
+        <img class="w-[48px] object-contain" src="{% static 'img/unhas.png' %}" alt="Logo Universitas Hasanuddin">
+        <img class="mt-[7px] w-[72px] object-contain" src="{% static 'img/alsa-white.png' %}" alt="Logo ALSA">
+        <img class="logo-gold mt-[3px] h-[66px] w-[45px] object-cover object-center" src="{% static 'img/gold-mark.png' %}" alt="Logo emas">
+      </header>
+
+      <main class="absolute inset-0 z-40">
+        <section class="department-title">
+          <h1>
+            HUMAN RESOURCE DEVELOPMENT<br>
+            DEPARTMENT
+          </h1>
+          <p>
+            &ldquo;{{ quote }}&rdquo;
+          </p>
+        </section>
+
+        <article class="department-letter department-card">
+          <p>
+            Hi, {{ participant_name }}<br>
+            Greetings from the HRD Department of ALSA Local Chapter Universitas Hasanuddin!
+          </p>
+
+          <p>
+            As an initial step, the department will be your room while you progress within the ALSA LC Unhas Family. We are confident that your ability to grow and contribute actively to various cross-departmental activities. This is because ALSA LC Unhas upholds the spirit of inclusivity and collaboration among members.
+          </p>
+
+          <p>Welcome to the big family of HRD Department!</p>
+
+          <p>
+            Building our Vision,<br>
+            Leading with Precision.
+          </p>
+
+          <p>
+            ALSA,<br>
+            Always be One!
+          </p>
+        </article>
+      </main>
+    </div>
+  </body>
+</html>
