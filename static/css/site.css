@@ -474,6 +474,24 @@
     line-height: 1;
     text-transform: uppercase;
   }
+  .login-error {
+    position: absolute;
+    z-index: 45;
+    left: 50%;
+    top: 65.35%;
+    translate: -50% 0;
+    width: 72%;
+    margin: 0;
+    border-radius: 9999px;
+    background: rgba(122, 7, 16, 0.88);
+    color: #fff5f5;
+    font-size: clamp(10px, 2.9cqw, 12px);
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.22);
+    padding: 1.7% 4%;
+  }
   .loading-screen {
     background: linear-gradient(180deg, #1c5daf 0%, #287dcc 48%, #38a0ee 100%);
   }

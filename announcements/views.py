@@ -127,7 +127,15 @@ def login_page(request):
             request.session['department'] = participant[1]
             return redirect('announcements:loading')
 
-        return render(request, 'announcements/index.html', {'invalid_login': True})
+        return render(
+            request,
+            'announcements/index.html',
+            {
+                'invalid_login': True,
+                'submitted_name': name,
+                'submitted_nim': nim,
+            },
+        )
 
     return render(request, 'announcements/index.html')
 
