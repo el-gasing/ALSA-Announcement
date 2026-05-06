@@ -35,7 +35,7 @@ ALLOWED_HOSTS = [
     host.strip()
     for host in os.environ.get(
         'ALLOWED_HOSTS',
-        '127.0.0.1,localhost,.onrender.com',
+        '127.0.0.1,localhost,.onrender.com,alsalmt.org,www.alsalmt.org',
     ).split(',')
     if host.strip()
 ]
@@ -44,7 +44,7 @@ CSRF_TRUSTED_ORIGINS = [
     origin.strip()
     for origin in os.environ.get(
         'CSRF_TRUSTED_ORIGINS',
-        'https://*.onrender.com',
+        'https://*.onrender.com,https://alsalmt.org,https://www.alsalmt.org',
     ).split(',')
     if origin.strip()
 ]
