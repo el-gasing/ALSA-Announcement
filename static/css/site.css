@@ -480,13 +480,25 @@
   .department-screen {
     background: linear-gradient(180deg, #1c5daf 0%, #287dcc 48%, #38a0ee 100%);
   }
-  .department-title {
+  .department-screen .art-layer:nth-child(2), .department-screen .art-layer:nth-child(3) {
+    top: 3%;
+    bottom: -3%;
+  }
+  .department-bottom {
     position: absolute;
-    top: 50.9%;
     left: 50%;
+    bottom: 5.3%;
     width: 94%;
+    top: 50%;
     translate: -50% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .department-title {
+    width: 100%;
     text-align: center;
+    flex-shrink: 0;
   }
   .department-title h1 {
     margin: 0;
@@ -525,13 +537,11 @@
     box-shadow: 0 1px 2px rgba(0, 44, 102, 0.18);
   }
   .department-card {
-    position: absolute;
-    left: 50%;
-    top: 62.6%;
-    bottom: 5.3%;
-    width: 84%;
-    translate: -50% 0;
+    width: 89%;
+    flex: 1;
+    min-height: 0;
     overflow: hidden;
+    margin-top: 2%;
     border-radius: clamp(28px, 7cqw, 58px);
     padding: clamp(22px, 6.2cqw, 46px) clamp(18px, 5.4cqw, 42px);
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(222, 234, 244, 0.86));
@@ -548,9 +558,9 @@
     margin-top: 3.7%;
   }
   @container (max-width: 390px) {
-    .department-title {
-      top: 50.2%;
-      width: 94%;
+    .department-bottom {
+      top: 51%;
+      bottom: 4.8%;
     }
     .department-title h1 {
       font-size: clamp(16px, 4.3cqw, 17px);
@@ -569,9 +579,6 @@
       margin-bottom: 2.35%;
     }
     .department-card {
-      top: 62.2%;
-      bottom: 4.8%;
-      width: 84.5%;
       padding: clamp(19px, 5.8cqw, 23px) clamp(16px, 5cqw, 20px);
     }
     .department-letter {
@@ -583,8 +590,9 @@
     }
   }
   @media (min-width: 700px) and (max-height: 720px) {
-    .department-title {
-      top: 47.5%;
+    .department-bottom {
+      top: 48%;
+      bottom: 2.8%;
     }
     .department-title h1 {
       font-size: clamp(13px, 4.15cqw, 15px);
@@ -606,8 +614,6 @@
       margin-bottom: 1.9%;
     }
     .department-card {
-      top: 62.5%;
-      bottom: 2.8%;
       padding: clamp(14px, 4.8cqw, 17px) clamp(14px, 4.7cqw, 17px);
     }
     .department-letter {
