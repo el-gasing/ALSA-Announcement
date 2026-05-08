@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Participant
+
+
+@admin.register(Participant)
+class ParticipantAdmin(admin.ModelAdmin):
+    list_display = ('nim', 'name', 'department')
+    search_fields = ('nim', 'name')
+    list_filter = ('department',)
