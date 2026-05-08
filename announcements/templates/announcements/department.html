@@ -21,6 +21,14 @@
       </header>
 
       <main class="absolute inset-0 z-40">
+        <form class="department-back-form" method="post" action="{% url 'announcements:back_to_login' %}">
+          {% csrf_token %}
+          <button class="department-back-button" type="submit" aria-label="Kembali ke login">
+            <span aria-hidden="true">&larr;</span>
+            <span>Back</span>
+          </button>
+        </form>
+
         <div class="department-bottom">
           <section class="department-title">
             <h1>{% for line in title_lines %}<span>{{ line }}</span>{% endfor %}</h1>
