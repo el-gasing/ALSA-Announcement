@@ -215,6 +215,11 @@
     margin-top: 3.7%;
   }
 
+  .department-letter p:nth-child(2) {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
   @container (max-width: 390px) {
     .department-bottom {
       top: 51%;
