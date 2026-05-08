@@ -215,7 +215,7 @@
     margin-top: 3.7%;
   }
 
-  .department-letter p:nth-child(2) {
+  .department-letter p:nth-child(-n + 3) {
     text-align: justify;
     text-justify: inter-word;
   }
