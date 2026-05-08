@@ -6,6 +6,7 @@ app_name = 'announcements'
 
 urlpatterns = [
     path('', views.login_page, name='login'),
+    path('back-to-login/', views.back_to_login, name='back_to_login'),
     path('loading/', views.loading_page, name='loading'),
     path('department/', views.department_page, name='department'),
     path('department-internal/', views.department_internal_page, name='department_internal'),

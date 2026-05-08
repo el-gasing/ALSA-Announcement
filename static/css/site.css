@@ -498,6 +498,31 @@
   .department-screen {
     background: linear-gradient(180deg, #1c5daf 0%, #287dcc 48%, #38a0ee 100%);
   }
+  .department-back-form {
+    position: absolute;
+    top: 2.35%;
+    left: 4.1%;
+    z-index: 50;
+  }
+  .department-back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0;
+    border-radius: 9999px;
+    background: rgba(12, 48, 100, 0.34);
+    color: #ffffff;
+    font-size: clamp(11px, 2.85cqw, 13px);
+    font-weight: 800;
+    line-height: 1;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.28), 0 6px 14px rgba(0, 0, 0, 0.14);
+    padding: 10px 14px;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+  }
+  .department-back-button span:first-child {
+    font-size: 1.1em;
+  }
   .department-screen .art-layer:nth-child(2), .department-screen .art-layer:nth-child(3) {
     top: 3%;
     bottom: -3%;

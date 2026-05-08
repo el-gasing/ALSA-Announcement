@@ -49,6 +49,11 @@ def loading_page(request):
     return render(request, 'announcements/loading.html')
 
 
+def back_to_login(request):
+    request.session.flush()
+    return redirect('announcements:login')
+
+
 def department_page(request):
     if not request.session.get('loading_allowed'):
         return redirect('announcements:login')
